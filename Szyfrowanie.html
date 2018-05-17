@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Alfabet Morsa</title>
+	<style>
+		body {
+			background-color: cornflowerblue;
+			text-align: center;
+		}
+
+		h1{
+			color: white;
+		}
+
+		#kontent{
+			background-color: lightgray;
+			width: 70%;
+			margin-left: 15%;
+			padding-top: 2%;
+			padding-bottom: 2%;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Źródło dźwięku długiego -->
+	<audio src="long.wav" id="long"></audio>
+
+	<!-- Źródło dźwięku krótkiego -->
+	<audio src="short.wav" id="short"></audio>
+
+	<h1>Szyfrowanie alfabetem Morse'a</h1>
+
+	<div id="kontent">
+		<p>Wprowaź wiadomość do nadania alfabetem Morse'a.</p>
+
+		<!-- Pole do wprowadzenia wiadomości przez użytkownika -->
+		<input id="text" />
+
+		<!-- Przycisk nadaj, który wywołuje funkcję konwertuj, znajdującą się w pliku szyfr.js -->
+		<button onclick="konwertuj();" type="button">Nadaj</button>
+
+		<p>Wiadomość zaszyfrowana</p>
+
+		<!-- Pole, w którym pojawia się zaszyfrowany tekst w postaci . i - -->
+		<input id="output" />
+
+	</div>
+
+	<!-- Dołączenie pliku z javaScriptem -->
+	<script src="szyfr.js"></script>
+</body>
+
+</html>
